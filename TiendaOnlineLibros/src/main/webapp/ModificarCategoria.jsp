@@ -21,16 +21,17 @@
                 <h1 id="titulo">Modificar categoría</h1>
             </div>
             <div id="main">
-                <form action="categoriasctrl?operacion=modificacion" method="post">
+                <form action="implCategoriaControlador.do?operacion=modificacion" method="post">
                     <fieldset>
+                        
+                        <p>
+                            <label for="idCategoria">Código de Categoria:</label>
+                            <input type="number" size="5" class="formulario" name="idCategoria" />
+                        </p>  
                         <p>
                             <label for="nombre"> Nombre:</label>
                             <input type="text" class="formulario" name="nombre" />
                         </p>
-                        <p>
-                            <label for="idCategoria">Código:</label>
-                            <input type="number" size="5" class="formulario" name="idCategoria" />
-                        </p>  
                          <p>
                             <label for="idLibro"> Código del libro:</label>
                             <input type="number" size="5" class="formulario" name="idLibro" />

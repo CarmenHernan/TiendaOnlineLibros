@@ -1,8 +1,8 @@
 package com.grupoB.proyecto.controlMarta;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.grupoB.project.modelo.*;
-import com.grupoB.project.servicio.*;
+import com.grupoB.proyecto.modelo.*;
+import com.grupoB.proyecto.servicio.*;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

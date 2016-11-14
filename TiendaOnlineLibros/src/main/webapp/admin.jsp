@@ -25,29 +25,25 @@
    
    <div id="usuario">
    <br/>
-    <img src="images/icono-usuario-verde.jpg" width="100" height="140" alt="usuarios" />
+    <a href="implUsuarioControlador.do?operacion=listado">
+            <img src="images/icono-usuario-verde.jpg" width="100" height="140" alt="categorias" />
+            </a>
     <br/>
             <h2> Usuarios</h2>
             <br/>
              
-             <input class="admin" href="ModificarUsuario.jsp" type="image" src="images/boton_modificar_usuario.jpg" />
-           <br/>
-            <input class="admin" href="BajaCliente.jsp" type="image" src="images/boton_eliminar_usuario.jpg" />
-                </div>
+              </div>
                 
                 
                 <div id="libros">
         <br/>
-            <img src="images/icono-libro-verde.jpg" width="100" height="140" alt="libros"  />
+         <a href="implLibroControlador.do?operacion=listado">
+            <img src="images/icono-libro-verde.jpg" width="100" height="140" alt="categorias" />
+            </a>
             <br/>
             <h2>Libros</h2>
             <br/>
-            <input class="admin" href="AltaLibro.jsp" type="image" src="images/boton_alta_libro.jpg" />
-            <br/>
-          <input class="admin" href="ModificarUsuario.jsp" type="image" src="images/boton_modificar_libro.jpg" />
-             <br/>
-         <input class="admin" href="BajaLibro.jsp" type="image" src="images/boton_eliminar_libro.jpg" />
-   
+           
    </div>
    
    
@@ -55,15 +51,12 @@
                 
                 <div id="categorias">
             <br/>
+            <a href="implCategoriaControlador.do?operacion=listado">
             <img src="images/icono-categoria-verde.jpg" width="100" height="140" alt="categorias" />
+            </a>
+            
             <br/>
             <h2>Categorias</h2>
-            <br/>
-     <input class="admin" href="AltaCategoria.jsp" type="image" src="images/boton_alta_categoria.jpg" />
-            <br/>
-          <input class="admin" href="ModificarCategoria.jsp" type="image" src="images/boton_modificar_categoria.jpg" />
-            <br/>
-   <input class="admin" href="BajaCategoria.jsp" type="image" src="images/boton_eliminar_categoria.jpg" />
             <br/>
             
             

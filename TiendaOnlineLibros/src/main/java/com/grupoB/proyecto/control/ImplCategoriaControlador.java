@@ -22,21 +22,28 @@ public class ImplCategoriaControlador implements IControlador
 
             if(operacion.equals("alta"))
             {
+            	System.out.println("estoy dando de alta");
             	catserv.persist(recogerDatos(request));
-            	response.sendRedirect("categoriasctrl?operacion=listado");
+            	request.setAttribute("categorias", catserv.findAll());
+            	//response.sendRedirect("implCategoriaControlador.do?operacion=listado");
             }
             else if(operacion.equals("baja"))
             {
-            	catserv.delete(Integer.parseInt(request.getParameter("idCategoria")));
-            	response.sendRedirect("categoriasctrl?operacion=listado");
+            	System.out.println("estoy dando de baja");
+            	catserv.delete(Integer.parseInt(request.getParameter("cod")));
+            	request.setAttribute("categorias", catserv.findAll());
+            	//response.sendRedirect("implCategoriaControlador.do?operacion=listado");
             }
             else if(operacion.equals("modificacion"))
             {
+            	System.out.println("estoy modificando");
             	catserv.update(recogerDatos(request));
-            	response.sendRedirect("categoriasctrl?operacion=listado");
+            	request.setAttribute("categorias", catserv.findAll());
+            	//response.sendRedirect("implCategoriaControlador.do?operacion=listado");
             }
             else if(operacion.equals("listado"))
             {
+            	System.out.println("estoy listando");
             	request.setAttribute("categorias", catserv.findAll());
             }
             
@@ -47,7 +54,7 @@ public class ImplCategoriaControlador implements IControlador
             System.out.println("----------------------------------------------------------");
         }   
 
-		return ("/listado.jsp");
+		return ("/listadoCategoria.jsp");
 	}
 	
 	
@@ -59,6 +66,7 @@ public class ImplCategoriaControlador implements IControlador
         LibroServicio libserv= new LibroServicio();
 
         Categoria c = new Categoria();
+        c.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
         c.setNombre(request.getParameter("nombre"));
         idLibro=Integer.parseInt(request.getParameter("idLibro"));
         l= libserv.findById(idLibro);

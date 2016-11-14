@@ -32,7 +32,9 @@ public class FrontServlet extends HttpServlet
 		super.init();
 
 		//Colocar el mapeado de los servidores y la insancia del controlador
-		controllers.put("/categoriasctrl", new ImplCategoriaControlador());
+		controllers.put("/implCategoriaControlador.do", new ImplCategoriaControlador());
+	
+	
 	}
 	
     
@@ -44,6 +46,7 @@ public class FrontServlet extends HttpServlet
 		String action = request.getServletPath();
 		// Ejecuta el controlador a partir de la accion
 		String view = controllers.get(action).process(request, response);
+		System.out.println(view);
 		// Crea la vista que viene a continuacion
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		// Redirige la peticion
