@@ -11,8 +11,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
 
@@ -28,24 +28,20 @@
                             <label for="idLibro">Código:</label>
                             <input type="number" size="5" class="formulario" name="idLibro" />
                         </p>  
-                        <p>
-                           <input type="image" id="boton_avanzada" src="images/boton_eliminar_libro.jpg" /> 
-                            
-                        </p>
+                       
                          
                     </fieldset>
                 </form>
             </div>
-        </div>
-<!-- / inner -->
+       
+<!-- / main -->
 		</div>
 <!-- / body -->
 		<div class="clear"></div>
-		
 <!-- / footer -->
 	</div>
 <!-- / inner -->
-
+	 </div>
 <!-- / wrapper -->
 </body>
 </html>

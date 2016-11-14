@@ -11,8 +11,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-    <!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+    <!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
 
@@ -25,7 +25,7 @@
                     <fieldset>
                         
                         <p>
-                            <label for="titulo" class> Título:</label>
+                            <label for="titulo"> Título:</label>
                             <input type="text" class="formulario" name="titulo" />
                         </p>
                         <p>
@@ -61,21 +61,20 @@
                             <input type="text" size="5" class="formulario" name="editorial" />
                         </p>
                         <p>
-                         <label for="categoria">Categoria:</label>
+                         <label for="categoria">Categoría:</label>
                             <input type="text" size="5" class="formulario" name="categoria" />
                         </p>
                      
                     
  
                         <p>
-                           <input type="image" id="boton_avanzada" src="images/boton_modificar_libro.jpg" /> 
+                           <input type="image" id="boton_avanzada" src="images/boton_buscar2_reducida.jpg" /> 
                              <!--<input type="submit" value="Buscar" id="buscar_avanzada"/> -->
                         </p>
                     </fieldset>
                 </form>
             </div>
-        </div>
-<!-- / inner -->
+<!-- / main -->
 		</div>
 <!-- / body -->
 		<div class="clear"></div>
@@ -83,7 +82,7 @@
 <!-- / footer -->
 	</div>
 <!-- / inner -->
-
+</div>
 <!-- / wrapper -->
 </body>
 </html>

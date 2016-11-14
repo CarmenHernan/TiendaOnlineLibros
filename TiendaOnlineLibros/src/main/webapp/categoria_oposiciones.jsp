@@ -10,8 +10,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
        
@@ -21,9 +21,9 @@
                  <div class="leftbox">
 					<h3><b>English File Intermidiate Student's Book + Workbook with Key</b></h3>
 					<img src="images/book_englishfile.JPG" width="108" height="140" alt="photo 1" class="left" />
-					<p>Autor:<b> VV.AA. (Varios autores)</b> </p>
+					<p>Autor: <b>VV.AA. (varios autores)</b></p>
                      <p>ISBN: 9780194519915</p>
-                    <p>Precio:<b> 41,90 EUR</b>.</p>
+                    <p>Precio: <b>41,90 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
@@ -40,7 +40,7 @@
 <!-- / rightbox -->
 				<div class="clear br"></div>
 				<div class="leftbox">
-					<h3><b>Conselleria de Sanitat Universal i Salut Publica. Generalitat Valenciana. Temario comÃºn</b></h3>
+					<h3><b>Conselleria de Sanitat Universal i Salut Publica. Generalitat Valenciana. Temario común</b></h3>
 					<img src="images/opos_conselleriageneralitat.jpg" width="106" height="141" alt="photo 2" class="left" />
 					<p>Autor: <b>VV.AA. (varios autores)</b></p>
                     <p>ISBN: 9788468170824</p>
@@ -52,8 +52,8 @@
 				<div class="rightbox">
 					<h3><b>Matemáticas, 1º Bachillerato</b></h3>
 					<img src="images/opos_matematicas.jpg" width="111" height="143" alt="photo 5" class="left" />
-					<p>Autor:<b> E. Santaella Fdez.; R. Colera Cañas; M. J. Oliveira Glez.; J. Colera JimÃ©nez</b></p>
-                    <p>ISBN: 8467826886; 9788467826883</p>
+					<p>Autor: <b>E. Santaella Fdez.; R. Colera Cañas; M. J. Oliveira Glez.; J. Colera Jiménez</b></p>
+                    <p>ISBN: 9788467826883</p>
                     <p>Precio: <b>36,55 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
@@ -63,9 +63,9 @@
 				<div class="leftbox">
 					<h3><b>Policía Nacional. Escala Básica. Ortografía, Psicotécnicos y entrevista personal</b></h3>
 					<img src="images/opos_escalabasicacnp.jpg" width="100" height="133" alt="photo 3" class="left" />
-					<p>Autor:<b> VV.AA. (varios autores)</b></p>
-                    <p>ISBN: 8468168378; 9788468168371</p>
-                    <p>Precio:<b> 45,00 EUR</b>.</p>
+					<p>Autor: <b>VV.AA. (varios autores)</b></p>
+                    <p>ISBN: 9788468168371</p>
+                    <p>Precio: <b>45,00 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
@@ -74,7 +74,7 @@
 					<h3><b>Cuaderno de verano. Lengua castellana 4º ESO</b></h3>
 					<img src="images/opos_lengua.jpg" width="100" height="141" alt="photo 6" class="left" />
 					<p>Autor: <b>VV.AA. (varios autores)</b></p>
-                    <p>ISBN: 8498043883; 9788498043884</p>
+                    <p>ISBN: 9788498043884</p>
                     <p>Precio: <b>13,50 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>

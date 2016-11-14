@@ -1,4 +1,4 @@
-<%@page errorPage="pagError.jsp" %>
+<%@page errorPage="pagError.jsp"%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,60 +7,142 @@
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="wrapper">
-	<div id="inner">
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
-    <%@ include file="panel_lateral.jsp"%>
-<!--Panel lateral-->
-	<div id="body">
-<div class="inner">
-                 <div class="leftbox">
-					<h3>Star Wars Trilogy (Widescreen Edition)</h3>
-					<img src="images/photo_1.jpg" width="93" height="95" alt="photo 1" class="left" />
-					<p><b>Price:</b> <b>$225.97</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$195</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
-					<div class="clear"></div>
-				</div>
-<!-- / leftbox -->
-				<div class="rightbox">
-					<h3>Batman - The Animated Series </h3>
-					<img src="images/photo_4.jpg" width="107" height="91" alt="photo 4" class="left" />
-					<p><b>Price:</b> <b>$125</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$105</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
-					<div class="clear"></div>
-				</div>
+	<div id="wrapper">
+		<div id="inner">
+			<%@ include file="cabecera.jsp"%>
+			<!-- cabecera -->
+			<%@ include file="panel_lateral.jsp"%>
+			<!--Panel lateral-->
+			<div id="body">
+				<div class="inner">
+					<div class="leftbox">
+						<h3>
+							<b>Heat wave</b>
+						</h3>
+						<img src="images/book_heatwave.jpg" width="100" height="152"
+							alt="photo 2" class="left" />
+						<p>
+							Autor: <b>Richard Castle</b>
+						</p>
+						<p>ISBN: 9781401323820</p>
+						<p>
+							Precio: <b>19,12 EUR</b>.
+						</p>
+						<p class="readmore">
+							<a href="#"><b>Añadir al carrito</b></a>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<!-- / leftbox -->
+					<div class="rightbox">
+						<h3>
+							<b>El alquimista</b>
+						</h3>
+						<img src="images/libro_elalquimista.jpg" width="100" height="151"
+							alt="photo 6" class="left" />
+						<p>
+							Autor: <b>Paulo Coelho</b>
+						</p>
+						<p>ISBN: 9788408130451</p>
+						<p>
+							Precio: <b>11,60 EUR</b>.
+						</p>
+						<p class="readmore">
+							<a href="#"><b>Añadir al carrito</b></a>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<!-- / rightbox -->
+					<div class="clear br"></div>
+					<div class="leftbox">
+						<h3>
+							<b>Euskera para dummies</b>
+						</h3>
+						<img src="images/idiomas_vasco.jpg" width="100" height="167"
+							alt="photo 3" class="left" />
+						<p>
+							Autor: <b>Jean Baptiste Coyos; Jasone Salaberria</b>
+						</p>
+						<p>ISBN: 9788432900730</p>
+						<p>
+							Precio: <b>9,99 EUR</b>.
+						</p>
+						<p class="readmore">
+							<a href="#"><b>Añadir al carrito</b></a>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<!-- / leftbox -->
+					<div class="rightbox">
+						<h3>
+							<b>Desarrollo Web con PHP y MySQL</b>
+						</h3>
+						<img src="images/informatica_bbdd.jpg" width="100" height="160"
+							alt="photo 1" class="left" />
+						<p>
+							Autor: <b>Luis Miguel Cabezas Granado; Francisco José
+								González Lozano</b>
+						</p>
+						<p>ISBN: 9788441535688</p>
+						<p>
+							Precio: <b>15,70 EUR</b>.
+						</p>
+						<p class="readmore">
+							<a href="#"><b>Añadir al carrito</b></a>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<!-- / rightbox -->
+					<div class="clear br"></div>
+					<div class="leftbox">
+						<h3>
+							<b>Trucos para manitas y manazas</b>
+						</h3>
+						<img src="images/bricolage_manitas.jpg" width="100" height="152"
+							alt="photo 4" class="left" />
+						<p>
+							Autor: <b>Dan Marshall</b>
+						</p>
+						<p>ISBN: 9788490603659</p>
+						<p>
+							Precio: <b>15,90 EUR</b>.
+						</p>
+						<p class="readmore">
+							<a href="#"><b>Añadir al carrito</b></a>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<!-- / leftbox -->
+					<div class="rightbox">
+						<h3>
+							<b>Por amor a la Física</b>
+						</h3>
+						<img src="images/cctecnicas_amorfisica.jpg" width="100"
+							height="153" alt="photo 4" class="left" />
+						<p>
+							Autor: <b>Walter Lewin</b>
+						</p>
+						<p>ISBN: 9788490320594</p>
+						<p>
+							Precio: <b>10,08 EUR</b>.
+						</p>
+						<p class="readmore">
+							<a href="#"><b>Añadir al carrito</b></a>
+						</p>
+						<div class="clear"></div>
+					
+					</div>
 <!-- / rightbox -->
-				<div class="clear br"></div>
-				<div class="leftbox">
-					<h3>Harry Potter and the Prisoner of Azkaban </h3>
-					<img src="images/photo_2.jpg" width="93" height="101" alt="photo 2" class="left" />
-					<p><b>Price:</b> <b>$350</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$295</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
-					<div class="clear"></div>
-				</div>
-<!-- / leftbox -->
-				<div class="rightbox">
-					<h3>Blade - Trinity (New Platinum Series)</h3>
-					<img src="images/photo_5.jpg" width="90" height="103" alt="photo 5" class="left" />
-					<p><b>Price:</b> <b>$115</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$95</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
-					<div class="clear"></div>
-				</div>
+<div class="clear"></div>
+</div>
 <!-- / inner -->
-		</div>
+</div>
 <!-- / body -->
-		<div class="clear"></div>
-		
+<div class="clear"></div>
 <!-- / footer -->
-	</div>
+</div>
 <!-- / inner -->
 </div>
 <!-- / wrapper -->
-    </div>
 </body>
 </html>

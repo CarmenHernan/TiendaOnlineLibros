@@ -11,12 +11,10 @@
 	<div id="inner">
        
     <%@ include file="cabecera.jsp"%> 
-<!-- / header -->
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
-    
 		<div id="body">
-
 
 					<h2 id="logocategoria"><b>El alquimista</b></h2>
 					<img src="images/libro_elalquimista.jpg" width="100" height="151" alt="photo 6" class="left" />
@@ -29,11 +27,11 @@
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 			
-
-<!-- / body -->
 		<div class="clear"></div>
+		</div>
+<!-- / body -->
 </div>
-</div>
+<!-- /inner -->
 </div>
 <!-- / wrapper -->
 </body>

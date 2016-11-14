@@ -10,8 +10,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
             
@@ -20,7 +20,7 @@
 		<div id="body">
 			<div class="inner">
                  <div class="leftbox">
-					<h3><b>Harry Potter y la Orden del FÃ©nix</b></h3>
+					<h3><b>Harry Potter y la Orden del Fénix</b></h3>
 					<img src="images/libro_harrypotterylaordendelfenix.jpg" width="105" height="164" alt="photo 1" class="left" />
 					<p>Autor:<b> J. K. Rowling</b> </p>
                      <p>ISBN: 978-84-9838-362-1</p>
@@ -41,7 +41,7 @@
 <!-- / rightbox -->
 				<div class="clear br"></div>
 				<div class="leftbox">
-					<h3><b>El último Catán</b></h3>
+					<h3><b>El último Catón</b></h3>
 					<img src="images/libro_elultimocaton.jpg" width="100" height="151" alt="photo 2" class="left" />
 					<p>Autor: <b>Matilde Asensi</b></p>
                     <p>ISBN: 9788498387544</p>

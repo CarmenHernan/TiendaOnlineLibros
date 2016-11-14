@@ -10,8 +10,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
     
@@ -19,43 +19,46 @@
 <div class="inner">
                 <p id="titulo">BIENVENIDO A SU CARRO DE COMPRA</p>
                  <div class="leftbox">
-					<h3>Star Wars Trilogy (Widescreen Edition)</h3>
-					<img src="images/photo_1.jpg" width="93" height="95" alt="photo 1" class="left" />
-					<p><b>Price:</b> <b>$225.97</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$195</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
+					<h3><b>¿Cuánto vale la x?</b></h3>
+					<img src="images/cctecnicas_lax.jpg" width="100" height="157" alt="photo 1" class="left" />
+					<p>Autor: <b>Vicente Meavilla</b> </p>
+                     <p>ISBN: 9788415828228</p>
+                    <p>Precio: <b>21,94 EUR</b>.</p>
 					<div class="clear"></div>
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3>Batman - The Animated Series </h3>
-					<img src="images/photo_4.jpg" width="107" height="91" alt="photo 4" class="left" />
-					<p><b>Price:</b> <b>$125</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$105</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
+					<h3><b>Por amor a la Física</b> </h3>
+					<img src="images/cctecnicas_amorfisica.jpg" width="100" height="153" alt="photo 4" class="left" />
+					<p>Autor: <b>Walter Lewin</b></p>
+                    <p>ISBN: 9788490320594</p>
+                    <p>Precio: <b>10,08 EUR</b>.</p>
 					<div class="clear"></div>
 				</div>
 <!-- / rightbox -->
 				<div class="clear br"></div>
 				<div class="leftbox">
-					<h3>Harry Potter and the Prisoner of Azkaban </h3>
-					<img src="images/photo_2.jpg" width="93" height="101" alt="photo 2" class="left" />
-					<p><b>Price:</b> <b>$350</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$295</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
+					<h3><b>365 enigmas y juegos de lógica</b></h3>
+					<img src="images/ocio_enigmasyjuegos.jpg" width="100" height="150" alt="photo 6" class="left" />
+					<p>Autor: <b>Miquel Capó Dolz</b></p>
+                    <p>ISBN: 9788484412267</p>
+                    <p>Precio: <b>13,95 EUR</b>.</p>
 					<div class="clear"></div>
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3>Blade - Trinity (New Platinum Series)</h3>
-					<img src="images/photo_5.jpg" width="90" height="103" alt="photo 5" class="left" />
-					<p><b>Price:</b> <b>$115</b> &amp; eligible for FREE Super Saver Shipping on orders over <b>$95</b>.</p>
-					<p><b>Availability:</b> Usually ships within 24 hours</p>
-					<p class="readmore"><a href="#">BUY <b>NOW</b></a></p>
+					<h3><b>Manual de escritura de los caracteres chinos</b></h3>
+					<img src="images/idiomas_chino.jpg" width="100" height="141" alt="photo 6" class="left" />
+					<p>Autor: <b>Pedro Ceinos Arcones</b></p>
+                    <p>ISBN: 9788478131730</p>
+                    <p>Precio: <b>24,30 EUR</b>.</p>
 					<div class="clear"></div>
 				</div>
 				
-				<p  id="precio"><strong>PRECIO TOTAL :</strong> 78,90 â‚¬  </p>
+				<p id="precio"><strong>PRECIO TOTAL: </strong><b>70,27 EUR</b>.</p>
+		
+<!-- /rightbox -->
+		</div>
 <!-- / inner -->
 		</div>
 <!-- / body -->

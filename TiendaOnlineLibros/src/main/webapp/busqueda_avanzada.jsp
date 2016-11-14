@@ -11,8 +11,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> 
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
 
@@ -38,7 +38,7 @@
                             <input type="number" size="5" class="formulario" name="isbn" />
                         </p> 
                            <p>
-                       Precio máximo que quieres gastar(en euros):
+                       Precio máximo que quieres gastar (en euros):
                             <script>
                                     function evalSlider()
                                         {
@@ -58,12 +58,10 @@
                     </fieldset>   
                 </form>
              </div>
-                     
-        </div>
-<!-- / rightbox -->
+ <!-- /main -->                    
 				<div class="clear"></div>
 			</div>
-<!-- / inner -->
+<!-- / body -->
 		</div>
 <!-- / body -->
 		<div class="clear"></div>

@@ -10,8 +10,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
         <div id="logocategoria">Categoría: Cómics y revistas</div>
@@ -20,18 +20,18 @@
                  <div class="leftbox">
 					<h3><b>Mortadelo y Filemón: ¡Elecciones!</b></h3>
 					<img src="images/comic_mortadelofilemon.jpg" width="100" height="134" alt="photo 1" class="left" />
-					<p>Autor:<b> Francisco Ibáñez Talavera</b> </p>
-                     <p>ISBN: 8466657932; 9788466657938</p>
-                    <p>Precio:<b> 12,90 EUR</b>.</p>
+					<p>Autor: <b>Francisco Ibáñez Talavera</b></p>
+                     <p>ISBN: 9788466657938</p>
+                    <p>Precio: <b>12,90 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3><b>El fantasma de la ó“pera</b></h3>
+					<h3><b>El fantasma de la Ópera</b></h3>
 					<img src="images/comic_fantasmadelaopera.jpg" width="100" height="139" alt="photo 6" class="left" />
                     <p>Autor: <b>Christophe Gaultier</b></p>
-                    <p>ISBN: 978-84-15979-22-7</p>
+                    <p>ISBN: 9788415979227</p>
 					<p>Precio: <b>21,11 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
@@ -49,10 +49,10 @@
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3><b>National Geographic 125 aÃ±os</b></h3>
+					<h3><b>National Geographic 125 años</b></h3>
 					<img src="images/revista_nationalgeographic.jpg" width="110" height="135" alt="photo 5" class="left" />
 					<p>Autor:<b> Mark Collins Jenkins</b></p>
-                    <p>ISBN: 8482985698; 9788482985695</p>
+                    <p>ISBN: 9788482985695</p>
                     <p>Precio: <b>35,00 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
@@ -62,9 +62,9 @@
 				<div class="leftbox">
 					<h3><b>X-Men: Primera generación. ¡Todos a clase!</b></h3>
 					<img src="images/comic_xmen.jpg" width="102" height="143" alt="photo 3" class="left" />
-					<p>Autor:<b> Parker; Jeff; Cruz; Roger</b></p>
+					<p>Autor: <b>Jeff Parker; Roger Cruz</b></p>
                     <p>ISBN: 9788498856996</p>
-                    <p>Precio:<b> 11,85 EUR</b>.</p>
+                    <p>Precio: <b>11,85 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>

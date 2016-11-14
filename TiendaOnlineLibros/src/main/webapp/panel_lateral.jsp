@@ -11,7 +11,7 @@
 			<dd><a href="categoria_oposiciones.jsp">Oposiciones y Libros de texto</a></dd>
 			<dd><a href="categoria_diccionario.jsp">Diccionarios y Ortografía</a></dd>
 			<dd><a href="categoria_idiomas.jsp">Idiomas</a></dd>
-			<dd><a title="CC Sociales, CC PolÃ­ticas, CC de la Salud, Turismo, Arte..." href="categoria_humanas.jsp">Ciencias Humanas</a></dd>
+			<dd><a title="CC Sociales, CC Políticas, CC de la Salud, Turismo, Arte..." href="categoria_humanas.jsp">Ciencias Humanas</a></dd>
 			<dd><a href="categoria_derecho.jsp">Derecho, Economía y Empresa</a></dd>
             <dd><a href="categoria_artes.jsp">Música, Teatro, Poesía y Danza</a></dd>
 			<dd class="last"><a href="categoria_otro.jsp">Otros</a></dd>
@@ -27,7 +27,8 @@
 					<div><input name="q" type="text" value="Nombre del libro" class="text" /></div>
 					<div class="softright"><input type="image" src="images/boton_buscar2.jpg" /></div>
 				</form>
-                    <a class="avanzada" href="busqueda_avanzada.jsp">Busqueda Avanzada</a>
+                    <a class="avanzada" href="busqueda_avanzada.jsp">Búsqueda Avanzada</a>
 			</dd>
 		</dl>
         </div>
+        <!-- /panel lateral -->

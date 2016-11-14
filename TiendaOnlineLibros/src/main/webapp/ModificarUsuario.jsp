@@ -11,7 +11,7 @@
 	<div id="inner">
        
     <%@ include file="cabecera.jsp"%>
-<!-- / header -->
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
 
@@ -23,7 +23,7 @@
                 <form action="?" method="post">
                     <fieldset>
                         <p>
-                            <label for="nombre"> Nombre:</label>
+                            <label for="nombre">Nombre:</label>
                             <input type="text" class="formulario" name="nombre" />
                         </p>
                         <p>
@@ -35,7 +35,7 @@
                             <input type="text" size="5" class="formulario" name="apellido2" />
                         </p> 
                          <p>
-                            <label for="direccion">Indique su direccion :</label>
+                            <label for="direccion">Indique su dirección :</label>
                             <input type="text" size="5" class="formulario" name="direccion" />
                         </p> 
                          <p>
@@ -47,11 +47,11 @@
                             <input type="text" size="5" class="formulario" name="provincia" />
                         </p>  
                         <p>
-                            <label for="pais">PaÃ­s:</label>
+                            <label for="pais">País:</label>
                             <input type="text" size="5" class="formulario" name="pais" />
                         </p>  
                         <p>
-                            <label for="codigoPostal">CÃ³digo Postal:</label>
+                            <label for="codigoPostal">Código Postal:</label>
                             <input type="number" size="5" class="formulario" name="codigoPostal" />
                         </p>  
                         <p>
@@ -59,11 +59,11 @@
                             <input type="email" size="5" class="formulario" name="email" />
                         </p> 
                            <p>
-                            <label for="telefono1"> Introduzca un primer nÃºmero de contacto:</label>
+                            <label for="telefono1"> Introduzca un primer número de contacto:</label>
                             <input type="number" size="5" class="formulario" name="telefono1" />
                         </p>
                         <p>
-                            <label for="telefono2">Introduzca un segundo nÃºmero de contacto:</label>
+                            <label for="telefono2">Introduzca un segundo número de contacto:</label>
                             <input type="number" size="5" class="formulario" name="telefono2" />
                         </p>
                         <p>
@@ -72,27 +72,27 @@
                         </p>
                         
                        <p>
-                            <label for="password">Indique una contraseÃ±a:</label>
+                            <label for="password">Indique una contraseña:</label>
                             <input type="password" size="5" class="formulario" name="password" />
                         </p>
-                         <p>
-                           <input type="image" id="boton_avanzada" src="images/boton_modificar_usuario.jpg" /> 
-                            
+                        <p>
+                           <input type="image" id="boton_avanzada" src="images/boton_darme_alta.jpg" /> 
+                             <!--<input type="submit" value="Buscar" id="buscar_avanzada"/> -->
                         </p>
-                      
+                       <!-- <p>
+                            <input type="submit" value="Darme de alta como cliente" />
+                        </p>-->
                     </fieldset>
                 </form>
             </div>
-        </div>
-<!-- / inner -->
+<!-- / main -->
 		</div>
 <!-- / body -->
 		<div class="clear"></div>
-		
 <!-- / footer -->
 	</div>
 <!-- / inner -->
-
+</div>
 <!-- / wrapper -->
 </body>
 </html>

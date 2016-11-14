@@ -1,6 +1,6 @@
 <div id="header">
             <div id="logotipo"><img id="imagen_logo" src="images/libro_arbol_logo.png" />  </div>
-<!-- / nav -->
+
 			<a href="index.jsp"><img id="imagen_cabeza" src="images/imagen_portada2.jpeg" /></a>
 		</div>
         <div class="inner_copy"></div>

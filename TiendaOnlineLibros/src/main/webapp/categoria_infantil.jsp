@@ -10,8 +10,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera-->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
        
@@ -19,63 +19,63 @@
 		<div id="body">
 			<div class="inner">
                  <div class="leftbox">
-					<h3><b>La cocina sana para disfrutar. Isasaweis</b></h3>
-					<img src="images/cocina_isasaweis.jpg" width="110" height="141" alt="photo 1" class="left" />
-					<p>Autor:<b> Isabel Llano Pah√≠no</b> </p>
-                     <p>ISBN: 8441537186; 978844153718</p>
-                    <p>Precio:<b> 15,16 EUR</b>.</p>
+					<h3><b>Gloria Fuertes</b></h3>
+					<img src="images/infantil_gloriafuertes.jpg" width="118" height="142" alt="photo 1" class="left" />
+					<p>Autor: <b>Gloria Fuertes</b> </p>
+                     <p>ISBN: 9788430598694</p>
+                    <p>Precio: <b>15,95 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>AÒadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3><b>Trucos para manitas y manazas</b> </h3>
-					<img src="images/bricolage_manitas.jpg" width="100" height="152" alt="photo 4" class="left" />
-					<p>Autor: <b>Dan Marshall</b>.</p>
-                    <p>ISBN: 8490603650; 9788490603659</p>
-                    <p>Precio: <b>15,90 EUR</b>.</p>
+					<h3><b>Teo en tren</b> </h3>
+					<img src="images/infantil_teoentren.jpg" width="110" height="114" alt="photo 4" class="left" />
+					<p>Autor: <b>Violeta Denou</b>.</p>
+                    <p>ISBN: 9788408157182</p>
+                    <p>Precio <b>8,95 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>AÒadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
 <!-- / rightbox -->
 				<div class="clear br"></div>
 				<div class="leftbox">
-					<h3><b>GuÌa turÌstica de EspaÒa 2013</b></h3>
-					<img src="images/turismo_guiaespa%C3%B1a.jpg" width="100" height="150" alt="photo 2" class="left" />
-					<p>Autor: <b>√Ångel Ingelmo; Jes˙s GarcÌa; Paloma Ledrado; Manuel Monreal; Enrique Yuste; Daniel Cabrera; Luis Mazarrasa</b></p>
-                    <p>ISBN:8480239433; 9788480239431</p>
-                    <p>Precio: <b>19,00 EUR</b>.</p>
+					<h3><b>Elmer, el elefante multicolor</b></h3>
+					<img src="images/infantil_elmer.jpeg" width="108" height="125" alt="photo 2" class="left" />
+					<p>Autor: <b>David Mckee</b></p>
+                    <p>ISBN: 9788448836429</p>
+                    <p>Precio: <b>19,95 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>AÒadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3><b>Creer</b></h3>
-					<img src="images/deporte_diegosimeone.jpg" width="100" height="153" alt="photo 5" class="left" />
-					<p>Autor:<b> Diego Simeone</b></p>
-                    <p>ISBN: 8448022734; 9788448022730</p>
-                    <p>Precio: <b>16,00 EUR</b>.</p>
+					<h3><b>Cuentos populares espaÒoles</b></h3>
+					<img src="images/infantil_cuentospopulares.jpeg" width="100" height="130" alt="photo 5" class="left" />
+					<p>Autor: <b>JosÈ MarÌa Guelbenzu</b></p>
+                    <p>ISBN: 9788478445271</p>
+                    <p>Precio: <b>18,50 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>AÒadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
 <!-- / rightbox -->
 				<div class="clear br"></div>
 				<div class="leftbox">
-					<h3><b>101 Juegos de vacaciones en familia.</b></h3>
-					<img src="images/juegos_juegosenfamilia.jpg" width="100" height="145" alt="photo 3" class="left" />
-					<p>Autor:<b> Shando Varda</b></p>
-                    <p>ISBN: 8495973561; 9788495973566</p>
-                    <p>Precio:<b> 10,00 EUR</b>.</p>
+					<h3><b>Mi gran libro de las adivinanzas</b></h3>
+					<img src="images/infantil_adivinanzas.jpg" width="100" height="138" alt="photo 3" class="left" />
+					<p>Autor: <b>E. L. James</b></p>
+                    <p>ISBN: 9788466213394</p>
+                    <p>Precio: <b>9,95 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>AÒadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
 <!-- / leftbox -->
 				<div class="rightbox">
-					<h3><b>365 enigmas y juegos de lÛgica</b></h3>
-					<img src="images/ocio_enigmasyjuegos.jpg" width="100" height="150" alt="photo 6" class="left" />
-					<p>Autor: <b>Miquel CapÈ Dolz</b></p>
-                    <p>ISBN: 8484412261; 9788484412267</p>
-                    <p>Precio: <b>13,95 EUR</b>.</p>
+					<h3><b>F·bulas infantiles</b></h3>
+					<img src="images/infantil_fabulas.jpg" width="100" height="137" alt="photo 6" class="left" />
+					<p>Autor: <b>VV.AA. (varios autores)</b></p>
+                    <p>ISBN: 9788466216234</p>
+                    <p>Precio: <b>9,95 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>AÒadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>

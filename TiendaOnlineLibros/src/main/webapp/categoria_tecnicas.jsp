@@ -10,8 +10,8 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
-<!-- / header -->
+    <%@ include file="cabecera.jsp"%>
+<!-- cabecera -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
        
@@ -21,9 +21,9 @@
                  <div class="leftbox">
 					<h3><b>¿Cuánto vale la x?</b></h3>
 					<img src="images/cctecnicas_lax.jpg" width="100" height="157" alt="photo 1" class="left" />
-					<p>Autor:<b> Vicente Meavilla</b> </p>
+					<p>Autor: <b>Vicente Meavilla</b> </p>
                      <p>ISBN: 9788415828228</p>
-                    <p>Precio:<b> 21,94 EUR</b>.</p>
+                    <p>Precio: <b>21,94 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
@@ -31,7 +31,7 @@
 				<div class="rightbox">
 					<h3><b>Por amor a la Física</b> </h3>
 					<img src="images/cctecnicas_amorfisica.jpg" width="100" height="153" alt="photo 4" class="left" />
-					<p>Autor: <b>Walter Lewin</b>.</p>
+					<p>Autor: <b>Walter Lewin</b></p>
                     <p>ISBN: 9788490320594</p>
                     <p>Precio: <b>10,08 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
@@ -52,7 +52,7 @@
 				<div class="rightbox">
 					<h3><b>Introducción a la Ingeniería Aeroespacial</b></h3>
 					<img src="images/cctecnicas_ingenieria.jpg" width="104" height="142" alt="photo 5" class="left" />
-					<p>Autor:<b> Sebastian Franchini; Ó“scar López García</b></p>
+					<p>Autor: <b>Sebastian Franchini; Ó“scar López García</b></p>
                     <p>ISBN: 9788492812905</p>
                     <p>Precio: <b>40,00 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
@@ -63,9 +63,9 @@
 				<div class="leftbox">
 					<h3><b>Ingeniería industrial: métodos, estándares y diseño del trabajo</b></h3>
 					<img src="images/cctecnicas_ingenieriaind.jpg" width="107" height="137" alt="photo 3" class="left" />
-					<p>Autor:<b> Benjamin Niebel; Andris Freivalds</b></p>
+					<p>Autor: <b>Benjamin Niebel; Andris Freivalds</b></p>
                     <p>ISBN: 9789701505977</p>
-                    <p>Precio:<b> 35,80 EUR</b>.</p>
+                    <p>Precio: <b>35,80 EUR</b>.</p>
 					<p class="readmore"><a href="#"><b>Añadir al carrito</b></a></p>
 					<div class="clear"></div>
 				</div>
