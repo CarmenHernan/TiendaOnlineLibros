@@ -66,7 +66,9 @@ public class ImplCategoriaControlador implements IControlador
         LibroServicio libserv= new LibroServicio();
 
         Categoria c = new Categoria();
-        c.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
+        
+        if((request.getParameter("operacion")).equals("modificacion"))
+        	c.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
         c.setNombre(request.getParameter("nombre"));
         idLibro=Integer.parseInt(request.getParameter("idLibro"));
         l= libserv.findById(idLibro);
