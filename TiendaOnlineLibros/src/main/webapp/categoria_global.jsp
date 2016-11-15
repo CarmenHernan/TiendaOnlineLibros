@@ -18,7 +18,7 @@
         <div id="logocategoria">Categoría: Idiomas</div>
 		<div id="body">
 			<div class="inner">
-				<c:forEach items="${categorias}" var="libro">
+				<c:forEach items="${categorias}"  var="libro">
 			        <div class="box">
 					<h3><b>${libro.nombre}</b></h3>
 					<img src="${libro.url}" width="103" height="142" alt="photo 1" class="left" />

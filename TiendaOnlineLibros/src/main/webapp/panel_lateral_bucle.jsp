@@ -5,7 +5,7 @@
 			<dd class="first"/>
 		<c:forEach items="${categorias}" var="categoria">
 			<tr>
-				<a id=${categorias.nombre} href="categoria.jsp">${categorias.nombre}</a>
+			<a id=${categorias.nombre} href="categoria.jsp">${categorias.nombre}</a>
 
 			</tr>
 		</c:forEach>
