@@ -15,20 +15,6 @@
 			<dd><a href="categoria_derecho.jsp">Derecho, Economía y Empresa</a></dd>
             <dd><a href="categoria_artes.jsp">Música, Teatro, Poesía y Danza</a></dd>
 			<dd class="last"><a href="categoria_otro.jsp">Otros</a></dd>
-			<dt>Búsqueda personalizada</dt>
-			<dd class="searchform">
-				<form action="resulta_busqueda.jsp" method="get">
-					<div>
-						<select name="cat">
-							<option value="-" selected="selected">CATEGORIES</option>
-							<option value="-">------------</option>
-						</select>
-					</div>
-					<div><input name="q" type="text" value="Nombre del libro" class="text" /></div>
-					<div class="softright"><input type="image" src="images/boton_buscar2.jpg" /></div>
-				</form>
-                    <a class="avanzada" href="busqueda_avanzada.jsp">Búsqueda Avanzada</a>
-			</dd>
 		</dl>
         </div>
         <!-- /panel lateral -->

@@ -13,7 +13,7 @@
 <div id="wrapper">
 	<div id="inner">
        
-    <%@ include file="cabecera.jsp"%> <!--Diapositiva 136-138-->
+    <%@ include file="cabecera.jsp"%> 
 <!-- / header -->
     <%@ include file="panel_lateral.jsp"%>
 <!--Panel lateral-->
