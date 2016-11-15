@@ -204,7 +204,7 @@ h3 {
 #browse {
      background: #F3E2A9;
     float:left;
-    width:195px;
+    width:24%;
     margin:0;
     padding:0;
     
@@ -249,8 +249,8 @@ h3 {
 #body {float:right;width:543px;margin:2px 1px 0 0;border:1px solid #e5e5e5;position:relative; background: #FFEFC6}
 #body p {margin:1em 0;padding:0}
 #body .leftbox, #body .rightbox {margin-top:5px;color:#464646}
-#body .leftbox {float:left;width:250px}
-#body .rightbox {float:right;width:252px;margin-right:18px;border-left:1px solid #e5e5e5}
+#body .box {float:left;width:45%;margin-right:25px}
+
 * html #body .rightbox {margin-right:10px}
 #body .br {border-bottom:1px solid #e5e5e5}
 #body .readmore {margin-top:-0.5em;margin-bottom:0;padding-bottom:0}
