@@ -25,7 +25,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 
 @Entity
-@Table(name = "autor", catalog = "tiendaonlinefinal3")
+@Table(name = "autor", catalog = "tiendaonlinefinal4")
 
 public class Autor implements java.io.Serializable {
 
