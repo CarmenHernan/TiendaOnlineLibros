@@ -13,6 +13,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 /**
@@ -30,8 +37,16 @@ public class Categoria implements java.io.Serializable {
 
 
 	private static final long serialVersionUID = 1L;
+	
+	@Size(max=15)
+	@NotNull
 	private Integer idCategoria;
+	
+	@Size(max=15)
+	@NotNull
 	private Libro libro;
+	@Size(max=45)
+	@NotNull
 	private String nombre;
 
 	public Categoria() {
