@@ -1,65 +1,59 @@
 package com.grupoB.proyecto.servicio;
 
 import java.util.List;
-import com.grupoB.proyecto.DAO.ImplAutorDAO;
-import com.grupoB.proyecto.modelo.Autor;
 
+
+import com.grupoB.proyecto.DAO.I_DAO;
+import com.grupoB.proyecto.modelo.Autor;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
 public class AutorServicio 
 {
-	private static ImplAutorDAO autorDao;
-
-	public AutorServicio() 
-	{
-		autorDao = new ImplAutorDAO();
+	@Autowired
+	private I_DAO<Autor,Integer>  autorDao;
+	
+	
+	/* No hace falta poner los constructores, está el vacío por defecto. En caso de ponerlos, tendría que poner ambos.
+	
+	public CategoriaServicio(){
+		
 	}
-
-	public void persist(Autor entity) 
-	{
-		autorDao.getSesion().openCurrentSessionwithTransaction();
+	
+	public CategoriaServicio(ImplCategoriaDAO categoriaDao) {
+		super();
+		this.ImplCategoriaDAO = categoriaDao;
+	}
+	*/
+	public void persist(Autor entity) {
 		autorDao.persist(entity);
-		autorDao.getSesion().closeCurrentSessionwithTransaction();
 	}
-
-	public void update(Autor entity) 
-	{
-		autorDao.getSesion().openCurrentSessionwithTransaction();
+		
+	public void update(Autor entity) {
 		autorDao.update(entity);
-		autorDao.getSesion().closeCurrentSessionwithTransaction();
 	}
+    public Autor findById(Integer id) {
+    	return autorDao.findById(id);
+    }
+		
+    	
+    	
+    public void delete(Autor entity) {	
+    	autorDao.delete(entity);
+    }
+    	
+    public void deleteById(Integer id) {
+    	autorDao.deleteById(id);
+    }
 
-	public Autor findById(Integer id) 
-	{
-		autorDao.getSesion().openCurrentSession();
-		Autor autor = autorDao.findById(id);
-		autorDao.getSesion().closeCurrentSession();
-		return autor;
+    public List<Autor> findAll() {	
+    	return autorDao.findAll();
+    }
+    	
+    public void deleteAll() {	
+    	autorDao.deleteAll();
+    }
 	}
-
-	public void delete(Integer id) 
-	{
-		autorDao.getSesion().openCurrentSessionwithTransaction();
-		Autor autor = autorDao.findById(id);
-		autorDao.delete(autor);
-		autorDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public List<Autor> findAll() 
-	{
-		autorDao.getSesion().openCurrentSession();
-		List<Autor> autores = autorDao.findAll();
-		autorDao.getSesion().closeCurrentSession();
-		return autores;
-	}
-
-	public void deleteAll() 
-	{
-		autorDao.getSesion().openCurrentSessionwithTransaction();
-		autorDao.deleteAll();
-		autorDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public ImplAutorDAO autorDao() 
-	{
-		return autorDao;
-	}
-}

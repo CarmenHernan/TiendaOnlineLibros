@@ -1,46 +1,66 @@
 package com.grupoB.proyecto.DAO;
+
 import java.util.List;
 
 import com.grupoB.proyecto.modelo.*;
-import com.grupoB.proyecto.util.Sesion;
-import com.grupoB.proyecto.DAO.*;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+
+@Repository
 public class ImplPrecioDAO implements I_DAO<Precio,Integer> {
-	private Sesion sesion;
+	//trabaja con el objeto hibernate
+	//dao es la ultima capa,x eso se le pasa objeto hibernate
+	 // es para q me inyecten
+    @Autowired
+	private SessionFactory sessionFactory;
 
 	public ImplPrecioDAO () {
-		sesion=new Sesion();
+		
 	}
-
-	public void persist(Precio entity) {
-	sesion.getCurrentSession().save(entity);
+	public ImplPrecioDAO(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 	
-	public void update(Precio entity) {
-		
-		sesion.getCurrentSession().update(entity);
+	
+	@Transactional
+	public void persist(Precio entity) {
+		sessionFactory.getCurrentSession().save(entity);
 	}
-
+	
+	@Transactional
+	public void update(Precio entity) {
+		sessionFactory.getCurrentSession().update(entity);
+	}
+	@Transactional
 	public Precio findById(Integer id) {
-		Precio precio = (Precio) sesion.getCurrentSession().get(Precio.class, id);
+		Precio precio = (Precio) sessionFactory.getCurrentSession().get(Precio.class, id);
 		return precio;
 	}
 
-	public void delete(Precio entity) {
-		sesion.getCurrentSession().delete(entity);
-	}
 
+	
+	@Transactional
+	public void delete(Precio entity) {
+		sessionFactory.getCurrentSession().delete(entity);
+	}
+	
+	@Transactional
 	public void deleteById(Integer id) {
 		Precio precio = findById(id);
 		delete(precio);
 	}
-
+	@Transactional
 	@SuppressWarnings("unchecked")
 	public List<Precio> findAll() {
-		List<Precio> precios= (List<Precio>) sesion.getCurrentSession().createQuery("from Precio").list();
-		return precios;
+		List<Precio> precio = (List<Precio>) sessionFactory.getCurrentSession().createQuery("from Precio").list();
+		return precio;
 	}
 
+	
+	@Transactional
 	//usa el método de arriba
 	public void deleteAll() {
 		List<Precio> entityList = findAll();
@@ -49,11 +69,5 @@ public class ImplPrecioDAO implements I_DAO<Precio,Integer> {
 		}
 	}
 
-	public Sesion getSesion() {
-		return sesion;
-	}
-
-	public void setSesion(Sesion sesion) {
-		this.sesion = sesion;
-	}
+	
 }

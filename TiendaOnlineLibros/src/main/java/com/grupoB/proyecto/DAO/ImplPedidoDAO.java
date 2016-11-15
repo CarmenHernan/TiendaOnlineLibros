@@ -1,46 +1,66 @@
 package com.grupoB.proyecto.DAO;
+
 import java.util.List;
 
 import com.grupoB.proyecto.modelo.*;
-import com.grupoB.proyecto.util.Sesion;
-import com.grupoB.proyecto.DAO.*;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+
+@Repository
 public class ImplPedidoDAO implements I_DAO<Pedido,Integer> {
-	private Sesion sesion;
+	//trabaja con el objeto hibernate
+	//dao es la ultima capa,x eso se le pasa objeto hibernate
+	 // es para q me inyecten
+    @Autowired
+	private SessionFactory sessionFactory;
 
 	public ImplPedidoDAO () {
-		sesion=new Sesion();
+		
 	}
-
-	public void persist(Pedido entity) {
-	sesion.getCurrentSession().save(entity);
+	public ImplPedidoDAO(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 	
-	public void update(Pedido entity) {
-		
-		sesion.getCurrentSession().update(entity);
+	
+	@Transactional
+	public void persist(Pedido entity) {
+		sessionFactory.getCurrentSession().save(entity);
 	}
-
+	
+	@Transactional
+	public void update(Pedido entity) {
+		sessionFactory.getCurrentSession().update(entity);
+	}
+	@Transactional
 	public Pedido findById(Integer id) {
-		Pedido pedido = (Pedido) sesion.getCurrentSession().get(Pedido.class, id);
+		Pedido pedido = (Pedido) sessionFactory.getCurrentSession().get(Pedido.class, id);
 		return pedido;
 	}
 
-	public void delete(Pedido entity) {
-		sesion.getCurrentSession().delete(entity);
-	}
 
+	
+	@Transactional
+	public void delete(Pedido entity) {
+		sessionFactory.getCurrentSession().delete(entity);
+	}
+	
+	@Transactional
 	public void deleteById(Integer id) {
 		Pedido pedido = findById(id);
 		delete(pedido);
 	}
-
+	@Transactional
 	@SuppressWarnings("unchecked")
 	public List<Pedido> findAll() {
-		List<Pedido> pedidos = (List<Pedido>) sesion.getCurrentSession().createQuery("from Pedido").list();
+		List<Pedido> pedidos = (List<Pedido>) sessionFactory.getCurrentSession().createQuery("from Pedido").list();
 		return pedidos;
 	}
 
+	
+	@Transactional
 	//usa el método de arriba
 	public void deleteAll() {
 		List<Pedido> entityList = findAll();
@@ -49,12 +69,5 @@ public class ImplPedidoDAO implements I_DAO<Pedido,Integer> {
 		}
 	}
 
-	public Sesion getSesion() {
-		return sesion;
-	}
-
-	public void setSesion(Sesion sesion) {
-		this.sesion = sesion;
-	}
-
+	
 }

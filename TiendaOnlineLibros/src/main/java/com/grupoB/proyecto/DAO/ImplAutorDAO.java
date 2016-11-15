@@ -3,50 +3,65 @@ package com.grupoB.proyecto.DAO;
 import java.util.List;
 
 import com.grupoB.proyecto.modelo.*;
-import com.grupoB.proyecto.util.Sesion;
-import com.grupoB.proyecto.DAO.*;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+
+@Repository
 public class ImplAutorDAO implements I_DAO<Autor,Integer> {
-	private Sesion sesion;
+	//trabaja con el objeto hibernate
+	//dao es la ultima capa,x eso se le pasa objeto hibernate
+	 // es para q me inyecten
+    @Autowired
+	private SessionFactory sessionFactory;
 
 	public ImplAutorDAO () {
-		sesion=new Sesion();
-	}
-
-	public void persist(Autor entity) {
-
-
-	sesion.getCurrentSession().save(entity);
-	}
-	// POR ESO YA PONGO PERSIST, PORQUE EN REALIDAD USA SAVE (IGUAL QUE EN EL
-	// ANTERIOR)
-	// (PERSIST ES EL NOMBRE QUE LE DA ANTONIO, NO TIENE Q VER CON EL JPA)
-
-	public void update(Autor entity) {
 		
-		sesion.getCurrentSession().update(entity);
 	}
-
+	public ImplAutorDAO(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	
+	@Transactional
+	public void persist(Autor entity) {
+		sessionFactory.getCurrentSession().save(entity);
+	}
+	
+	@Transactional
+	public void update(Autor entity) {
+		sessionFactory.getCurrentSession().update(entity);
+	}
+	@Transactional
 	public Autor findById(Integer id) {
-		Autor autor = (Autor) sesion.getCurrentSession().get(Autor.class, id);
+		Autor autor = (Autor) sessionFactory.getCurrentSession().get(Categoria.class, id);
 		return autor;
 	}
 
-	public void delete(Autor entity) {
-		sesion.getCurrentSession().delete(entity);
-	}
 
+	
+	@Transactional
+	public void delete(Autor entity) {
+		sessionFactory.getCurrentSession().delete(entity);
+	}
+	
+	@Transactional
 	public void deleteById(Integer id) {
 		Autor autor = findById(id);
 		delete(autor);
 	}
-
+	@Transactional
 	@SuppressWarnings("unchecked")
 	public List<Autor> findAll() {
-		List<Autor> autores = (List<Autor>) sesion.getCurrentSession().createQuery("from Autor").list();
+		List<Autor> autores = (List<Autor>) sessionFactory.getCurrentSession().createQuery("from Autor").list();
 		return autores;
 	}
 
+	
+	@Transactional
+	//usa el método de arriba
 	public void deleteAll() {
 		List<Autor> entityList = findAll();
 		for (Autor entity : entityList) {
@@ -54,12 +69,5 @@ public class ImplAutorDAO implements I_DAO<Autor,Integer> {
 		}
 	}
 
-	public Sesion getSesion() {
-		return sesion;
-	}
-
-	public void setSesion(Sesion sesion) {
-		this.sesion = sesion;
-	}
-
+	
 }

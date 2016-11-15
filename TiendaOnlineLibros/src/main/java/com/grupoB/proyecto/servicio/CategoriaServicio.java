@@ -1,66 +1,60 @@
 package com.grupoB.proyecto.servicio;
 
 import java.util.List;
+
+import com.grupoB.proyecto.DAO.I_DAO;
 import com.grupoB.proyecto.DAO.ImplCategoriaDAO;
+import com.grupoB.proyecto.modelo.Autor;
 import com.grupoB.proyecto.modelo.Categoria;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
+@Transactional
 public class CategoriaServicio 
 {
-	private static ImplCategoriaDAO categoriaDao;
-
-	public CategoriaServicio() 
-	{
-		categoriaDao = new ImplCategoriaDAO();
+	@Autowired
+	private I_DAO<Categoria,Integer> categoriaDao;
+	
+	
+	/* No hace falta poner los constructores, está el vacío por defecto. En caso de ponerlos, tendría que poner ambos.
+	
+	public CategoriaServicio(){
+		
 	}
-
-	public void persist(Categoria categoria) 
-	{
-		categoriaDao.getSesion().openCurrentSessionwithTransaction();
-		categoriaDao.persist(categoria);
-		categoriaDao.getSesion().closeCurrentSessionwithTransaction();
+	
+	public CategoriaServicio(ImplCategoriaDAO categoriaDao) {
+		super();
+		this.ImplCategoriaDAO = categoriaDao;
 	}
-
-	public void update(Categoria categoria) 
-	{
-		categoriaDao.getSesion().openCurrentSessionwithTransaction();
-		categoriaDao.update(categoria);
-		categoriaDao.getSesion().closeCurrentSessionwithTransaction();
+	*/
+	public void persist(Categoria entity) {
+		categoriaDao.persist(entity);
 	}
-
-	public Categoria findById(Integer id) 
-	{
-		categoriaDao.getSesion().openCurrentSession();
-		Categoria book = categoriaDao.findById(id);
-		categoriaDao.getSesion().closeCurrentSession();
-		return book;
+		
+	public void update(Categoria entity) {
+		categoriaDao.update(entity);
 	}
+    public Categoria findById(Integer id) {
+    	return categoriaDao.findById(id);
+    }
+		
+    	
+    	
+    public void delete(Categoria entity) {	
+    	categoriaDao.delete(entity);
+    }
+    	
+    public void deleteById(Integer id) {
+    	categoriaDao.deleteById(id);
+    }
 
-	public void delete(Integer id) 
-	{
-		categoriaDao.getSesion().openCurrentSessionwithTransaction();
-		Categoria book = categoriaDao.findById(id);
-		categoriaDao.delete(book);
-		categoriaDao.getSesion().closeCurrentSessionwithTransaction();
+    public List<Categoria> findAll() {	
+    	return categoriaDao.findAll();
+    }
+    	
+    public void deleteAll() {	
+    	categoriaDao.deleteAll();
+    }
 	}
-
-	public List<Categoria> findAll() 
-	{
-		categoriaDao.getSesion().openCurrentSession();
-		List<Categoria> books = categoriaDao.findAll();
-		categoriaDao.getSesion().closeCurrentSession();
-		return books;
-	}
-
-	public void deleteAll() 
-	{
-		categoriaDao.getSesion().openCurrentSessionwithTransaction();
-		categoriaDao.deleteAll();
-		categoriaDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public ImplCategoriaDAO categoriaDao() 
-	{
-		return categoriaDao;
-	}
-}

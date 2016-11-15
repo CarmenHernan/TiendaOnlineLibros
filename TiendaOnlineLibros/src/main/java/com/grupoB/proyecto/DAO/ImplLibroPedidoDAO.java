@@ -1,47 +1,67 @@
 package com.grupoB.proyecto.DAO;
+
 import java.util.List;
 
 import com.grupoB.proyecto.modelo.*;
-import com.grupoB.proyecto.util.Sesion;
-import com.grupoB.proyecto.DAO.*;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+
+@Repository
 public class ImplLibroPedidoDAO implements I_DAO<Libropedido,Integer> {
-	private Sesion sesion;
+	//trabaja con el objeto hibernate
+	//dao es la ultima capa,x eso se le pasa objeto hibernate
+	 // es para q me inyecten
+    @Autowired
+	private SessionFactory sessionFactory;
 
 	public ImplLibroPedidoDAO () {
-		sesion=new Sesion();
+		
 	}
-
-	public void persist(Libropedido entity) {
-	sesion.getCurrentSession().save(entity);
+	public ImplLibroPedidoDAO(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 	
-	public void update(Libropedido entity) {
-		
-		sesion.getCurrentSession().update(entity);
+	
+	@Transactional
+	public void persist(Libropedido entity) {
+		sessionFactory.getCurrentSession().save(entity);
 	}
-
+	
+	@Transactional
+	public void update(Libropedido entity) {
+		sessionFactory.getCurrentSession().update(entity);
+	}
+	@Transactional
 	public Libropedido findById(Integer id) {
-		Libropedido libropedido = (Libropedido) sesion.getCurrentSession().get(Libro.class, id);
+		Libropedido libropedido = (Libropedido) sessionFactory.getCurrentSession().get(Libropedido.class, id);
 		return libropedido;
 	}
 
-	public void delete(Libropedido entity) {
-		sesion.getCurrentSession().delete(entity);
-	}
 
+	
+	@Transactional
+	public void delete(Libropedido entity) {
+		sessionFactory.getCurrentSession().delete(entity);
+	}
+	
+	@Transactional
 	public void deleteById(Integer id) {
 		Libropedido libropedido = findById(id);
 		delete(libropedido);
 	}
-
+	@Transactional
 	@SuppressWarnings("unchecked")
 	public List<Libropedido> findAll() {
-		List<Libropedido> libropedidos = (List<Libropedido>) sesion.getCurrentSession().createQuery("from Libropedido").list();
-		return libropedidos;
+		List<Libropedido> libropedido = (List<Libropedido>) sessionFactory.getCurrentSession().createQuery("from Libropedido").list();
+		return libropedido;
 	}
 
-	//usa el método de arriba
+	
+	@Transactional
+	//usa el mÃ©todo de arriba
 	public void deleteAll() {
 		List<Libropedido> entityList = findAll();
 		for (Libropedido entity : entityList) {
@@ -49,12 +69,5 @@ public class ImplLibroPedidoDAO implements I_DAO<Libropedido,Integer> {
 		}
 	}
 
-	public Sesion getSesion() {
-		return sesion;
-	}
-
-	public void setSesion(Sesion sesion) {
-		this.sesion = sesion;
-	}
-
+	
 }

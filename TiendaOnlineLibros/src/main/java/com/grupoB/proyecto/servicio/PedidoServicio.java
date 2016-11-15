@@ -2,65 +2,49 @@ package com.grupoB.proyecto.servicio;
 
 import java.util.List;
 
+import com.grupoB.proyecto.DAO.I_DAO;
 import com.grupoB.proyecto.DAO.ImplPedidoDAO;
+import com.grupoB.proyecto.modelo.Autor;
 import com.grupoB.proyecto.modelo.Pedido;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
 public class PedidoServicio 
 {
-	private static ImplPedidoDAO pedidoDao;
-
-	public PedidoServicio() 
-	{
-		pedidoDao = new ImplPedidoDAO();
+	@Autowired
+	private I_DAO<Pedido,Integer> pedidoDao;
+	
+	
+	
+	public void persist(Pedido entity) {
+		pedidoDao.persist(entity);
 	}
-
-	public void persist(Pedido pedido) 
-	{
-		pedidoDao.getSesion().openCurrentSessionwithTransaction();
-		pedidoDao.persist(pedido);
-		pedidoDao.getSesion().closeCurrentSessionwithTransaction();
+		
+	public void update(Pedido entity) {
+		pedidoDao.update(entity);
 	}
+    public Pedido findById(Integer id) {
+    	return pedidoDao.findById(id);
+    }
+		
+    	
+    	
+    public void delete(Pedido entity) {	
+    	pedidoDao.delete(entity);
+    }
+    	
+    public void deleteById(Integer id) {
+    	pedidoDao.deleteById(id);
+    }
 
-	public void update(Pedido pedido) 
-	{
-		pedidoDao.getSesion().openCurrentSessionwithTransaction();
-		pedidoDao.update(pedido);
-		pedidoDao.getSesion().closeCurrentSessionwithTransaction();
+    public List<Pedido> findAll() {	
+    	return pedidoDao.findAll();
+    }
+    	
+    public void deleteAll() {	
+    	pedidoDao.deleteAll();
+    }
 	}
-
-	public Pedido findById(Integer id) 
-	{
-		pedidoDao.getSesion().openCurrentSession();
-		Pedido book = pedidoDao.findById(id);
-		pedidoDao.getSesion().closeCurrentSession();
-		return book;
-	}
-
-	public void delete(Integer id) 
-	{
-		pedidoDao.getSesion().openCurrentSessionwithTransaction();
-		Pedido book = pedidoDao.findById(id);
-		pedidoDao.delete(book);
-		pedidoDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public List<Pedido> findAll() 
-	{
-		pedidoDao.getSesion().openCurrentSession();
-		List<Pedido> books = pedidoDao.findAll();
-		pedidoDao.getSesion().closeCurrentSession();
-		return books;
-	}
-
-	public void deleteAll() 
-	{
-		pedidoDao.getSesion().openCurrentSessionwithTransaction();
-		pedidoDao.deleteAll();
-		pedidoDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public ImplPedidoDAO pedidoDao() 
-	{
-		return pedidoDao;
-	}
-}

@@ -1,46 +1,66 @@
 package com.grupoB.proyecto.DAO;
+
 import java.util.List;
 
 import com.grupoB.proyecto.modelo.*;
-import com.grupoB.proyecto.util.Sesion;
-import com.grupoB.proyecto.DAO.*;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+
+@Repository
 public class ImplStockDAO implements I_DAO<Stock,Integer> {
-	private Sesion sesion;
+	//trabaja con el objeto hibernate
+	//dao es la ultima capa,x eso se le pasa objeto hibernate
+	 // es para q me inyecten
+    @Autowired
+	private SessionFactory sessionFactory;
 
 	public ImplStockDAO () {
-		sesion=new Sesion();
+		
 	}
-
-	public void persist(Stock entity) {
-	sesion.getCurrentSession().save(entity);
+	public ImplStockDAO(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 	
-	public void update(Stock entity) {
-		
-		sesion.getCurrentSession().update(entity);
+	
+	@Transactional
+	public void persist(Stock entity) {
+		sessionFactory.getCurrentSession().save(entity);
 	}
-
+	
+	@Transactional
+	public void update(Stock entity) {
+		sessionFactory.getCurrentSession().update(entity);
+	}
+	@Transactional
 	public Stock findById(Integer id) {
-		Stock stock = (Stock) sesion.getCurrentSession().get(Stock.class, id);
+		Stock stock = (Stock) sessionFactory.getCurrentSession().get(Stock.class, id);
 		return stock;
 	}
 
-	public void delete(Stock entity) {
-		sesion.getCurrentSession().delete(entity);
-	}
 
+	
+	@Transactional
+	public void delete(Stock entity) {
+		sessionFactory.getCurrentSession().delete(entity);
+	}
+	
+	@Transactional
 	public void deleteById(Integer id) {
 		Stock stock = findById(id);
 		delete(stock);
 	}
-
+	@Transactional
 	@SuppressWarnings("unchecked")
 	public List<Stock> findAll() {
-		List<Stock> stocks= (List<Stock>) sesion.getCurrentSession().createQuery("from Stock").list();
-		return stocks;
+		List<Stock> stock = (List<Stock>) sessionFactory.getCurrentSession().createQuery("from Stock").list();
+		return stock;
 	}
 
+	
+	@Transactional
 	//usa el método de arriba
 	public void deleteAll() {
 		List<Stock> entityList = findAll();
@@ -49,11 +69,5 @@ public class ImplStockDAO implements I_DAO<Stock,Integer> {
 		}
 	}
 
-	public Sesion getSesion() {
-		return sesion;
-	}
-
-	public void setSesion(Sesion sesion) {
-		this.sesion = sesion;
-	}
+	
 }

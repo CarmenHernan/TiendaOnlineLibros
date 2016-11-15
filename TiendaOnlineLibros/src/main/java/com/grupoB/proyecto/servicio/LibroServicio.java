@@ -2,66 +2,49 @@ package com.grupoB.proyecto.servicio;
 
 import java.util.List;
 
+import com.grupoB.proyecto.DAO.I_DAO;
 import com.grupoB.proyecto.DAO.ImplLibroDAO;
+import com.grupoB.proyecto.modelo.Autor;
 import com.grupoB.proyecto.modelo.Libro;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
+@Transactional
 public class LibroServicio 
 {
-	private static ImplLibroDAO libroDao;
-
-	public LibroServicio() 
-	{
-		libroDao = new ImplLibroDAO();
+	@Autowired
+	private I_DAO<Libro,Integer> libroDao;
+	
+	
+	
+	public void persist(Libro entity) {
+		libroDao.persist(entity);
 	}
-
-	public void persist(Libro libro) 
-	{
-		libroDao.getSesion().openCurrentSessionwithTransaction();
-		libroDao.persist(libro);
-		libroDao.getSesion().closeCurrentSessionwithTransaction();
+		
+	public void update(Libro entity) {
+		libroDao.update(entity);
 	}
+    public Libro findById(Integer id) {
+    	return libroDao.findById(id);
+    }
+		
+    	
+    	
+    public void delete(Libro entity) {	
+    	libroDao.delete(entity);
+    }
+    	
+    public void deleteById(Integer id) {
+    	libroDao.deleteById(id);
+    }
 
-	public void update(Libro libro) 
-	{
-		libroDao.getSesion().openCurrentSessionwithTransaction();
-		libroDao.update(libro);
-		libroDao.getSesion().closeCurrentSessionwithTransaction();
+    public List<Libro> findAll() {	
+    	return libroDao.findAll();
+    }
+    	
+    public void deleteAll() {	
+    	libroDao.deleteAll();
+    }
 	}
-
-	public Libro findById(Integer id) 
-	{
-		libroDao.getSesion().openCurrentSession();
-		Libro book = libroDao.findById(id);
-		libroDao.getSesion().closeCurrentSession();
-		return book;
-	}
-
-	public void delete(Integer id) 
-	{
-		libroDao.getSesion().openCurrentSessionwithTransaction();
-		Libro book = libroDao.findById(id);
-		libroDao.delete(book);
-		libroDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public List<Libro> findAll() 
-	{
-		libroDao.getSesion().openCurrentSession();
-		List<Libro> books = libroDao.findAll();
-		libroDao.getSesion().closeCurrentSession();
-		return books;
-	}
-
-	public void deleteAll() 
-	{
-		libroDao.getSesion().openCurrentSessionwithTransaction();
-		libroDao.deleteAll();
-		libroDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public ImplLibroDAO libroDao() 
-	{
-		return libroDao;
-	}
-}

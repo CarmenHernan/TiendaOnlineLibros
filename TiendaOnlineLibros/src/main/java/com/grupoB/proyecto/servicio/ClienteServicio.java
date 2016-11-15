@@ -2,65 +2,49 @@ package com.grupoB.proyecto.servicio;
 
 import java.util.List;
 
+import com.grupoB.proyecto.DAO.I_DAO;
 import com.grupoB.proyecto.DAO.ImplClienteDAO;
+import com.grupoB.proyecto.modelo.Autor;
 import com.grupoB.proyecto.modelo.Cliente;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
 public class ClienteServicio 
 {
-	private static ImplClienteDAO clienteDao;
-
-	public ClienteServicio() 
-	{
-		clienteDao = new ImplClienteDAO();
+	@Autowired
+	private I_DAO<Cliente,Integer>  clienteDao;
+	
+	
+	
+	public void persist(Cliente entity) {
+		clienteDao.persist(entity);
 	}
-
-	public void persist(Cliente cliente) 
-	{
-		clienteDao.getSesion().openCurrentSessionwithTransaction();
-		clienteDao.persist(cliente);
-		clienteDao.getSesion().closeCurrentSessionwithTransaction();
+		
+	public void update(Cliente entity) {
+		clienteDao.update(entity);
 	}
+    public Cliente findById(Integer id) {
+    	return clienteDao.findById(id);
+    }
+		
+    	
+    	
+    public void delete(Cliente entity) {	
+    	clienteDao.delete(entity);
+    }
+    	
+    public void deleteById(Integer id) {
+    	clienteDao.deleteById(id);
+    }
 
-	public void update(Cliente cliente) 
-	{
-		clienteDao.getSesion().openCurrentSessionwithTransaction();
-		clienteDao.update(cliente);
-		clienteDao.getSesion().closeCurrentSessionwithTransaction();
+    public List<Cliente> findAll() {	
+    	return clienteDao.findAll();
+    }
+    	
+    public void deleteAll() {	
+    	clienteDao.deleteAll();
+    }
 	}
-
-	public Cliente findById(Integer id) 
-	{
-		clienteDao.getSesion().openCurrentSession();
-		Cliente book = clienteDao.findById(id);
-		clienteDao.getSesion().closeCurrentSession();
-		return book;
-	}
-
-	public void delete(Integer id) 
-	{
-		clienteDao.getSesion().openCurrentSessionwithTransaction();
-		Cliente book = clienteDao.findById(id);
-		clienteDao.delete(book);
-		clienteDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public List<Cliente> findAll() 
-	{
-		clienteDao.getSesion().openCurrentSession();
-		List<Cliente> books = clienteDao.findAll();
-		clienteDao.getSesion().closeCurrentSession();
-		return books;
-	}
-
-	public void deleteAll() 
-	{
-		clienteDao.getSesion().openCurrentSessionwithTransaction();
-		clienteDao.deleteAll();
-		clienteDao.getSesion().closeCurrentSessionwithTransaction();
-	}
-
-	public ImplClienteDAO clienteDao() 
-	{
-		return clienteDao;
-	}
-}
